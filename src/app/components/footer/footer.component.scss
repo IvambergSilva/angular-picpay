@@ -1,0 +1,54 @@
+@import '../../../assets/styles/variables.scss';
+
+$height: 5rem;
+
+footer {
+    ul {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        height: calc($height * 1.5);
+        padding: 1rem 5rem;
+        border-top: 1px solid $GreyScale-900;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style-type: none;
+            cursor: pointer;
+            gap: calc($height / 4);
+            padding: 0 1rem;
+
+            img {
+                height: calc($height / 2);
+            }
+
+            span {
+                font-size: 1.2rem;
+            }
+
+            &.footerPay {
+                display: flex;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+
+                div {
+                    position: absolute;
+                    top: calc($height / 2 * -1);
+
+                    background: $Money-value;
+                    padding: 1rem 3rem;
+                    border-radius: $height;
+
+                    box-shadow: 0 0 0 1rem #000;
+                }
+                
+                span {
+                    padding: $height 1rem 0;
+                }
+            }
+        }
+    }
+}
